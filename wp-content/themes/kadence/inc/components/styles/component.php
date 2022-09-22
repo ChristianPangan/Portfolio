@@ -1643,9 +1643,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->render_font( kadence()->option( 'sidebar_widget_content' ), $css );
 		$css->set_selector( '.primary-sidebar.widget-area .widget-title' );
 		$css->render_font( kadence()->option( 'sidebar_widget_title' ), $css );
-		$css->set_selector( '.primary-sidebar.widget-area .sidebar-inner-wrap a:not(.button):not(.wp-block-button__link):not(.wp-element-button)' );
+		$css->set_selector( '.primary-sidebar.widget-area .sidebar-inner-wrap a:where(:not(.button):not(.wp-block-button__link):not(.wp-element-button))' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'sidebar_link_colors', 'color' ) ) );
-		$css->set_selector( '.primary-sidebar.widget-area .sidebar-inner-wrap a:not(.button):not(.wp-block-button__link):not(.wp-element-button):hover' );
+		$css->set_selector( '.primary-sidebar.widget-area .sidebar-inner-wrap a:where(:not(.button):not(.wp-block-button__link):not(.wp-element-button)):hover' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'sidebar_link_colors', 'hover' ) ) );
 		$css->set_selector( '.primary-sidebar.widget-area' );
 		$css->render_background( kadence()->sub_option( 'sidebar_background', 'desktop' ), $css );
@@ -1780,9 +1780,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->render_font( kadence()->option( 'footer_middle_widget_content' ), $css );
 		$css->add_property( 'border-top', $css->render_border( kadence()->sub_option( 'footer_middle_top_border', 'desktop' ) ) );
 		$css->add_property( 'border-bottom', $css->render_border( kadence()->sub_option( 'footer_middle_bottom_border', 'desktop' ) ) );
-		$css->set_selector( '.site-footer .site-middle-footer-wrap .site-footer-row-container-inner a:not(.button):not(.wp-block-button__link):not(.wp-element-button)' );
+		$css->set_selector( '.site-footer .site-middle-footer-wrap a:where(:not(.button):not(.wp-block-button__link):not(.wp-element-button))' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'footer_middle_link_colors', 'color' ) ) );
-		$css->set_selector( '.site-footer .site-middle-footer-wrap .site-footer-row-container-inner a:not(.button):not(.wp-block-button__link):not(.wp-element-button):hover' );
+		$css->set_selector( '.site-footer .site-middle-footer-wrap a:where(:not(.button):not(.wp-block-button__link):not(.wp-element-button)):hover' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'footer_middle_link_colors', 'hover' ) ) );
 		$css->set_selector( '.site-middle-footer-inner-wrap' );
 		$css->add_property( 'min-height', $this->render_range( kadence()->option( 'footer_middle_height' ), 'desktop' ) );
@@ -1854,9 +1854,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->render_font( kadence()->option( 'footer_top_widget_content' ), $css );
 		$css->add_property( 'border-top', $css->render_border( kadence()->sub_option( 'footer_top_top_border', 'desktop' ) ) );
 		$css->add_property( 'border-bottom', $css->render_border( kadence()->sub_option( 'footer_top_bottom_border', 'desktop' ) ) );
-		$css->set_selector( '.site-footer .site-top-footer-wrap .site-footer-row-container-inner a:not(.button):not(.wp-block-button__link):not(.wp-element-button)' );
+		$css->set_selector( '.site-footer .site-top-footer-wrap a:not(.button):not(.wp-block-button__link):not(.wp-element-button)' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'footer_top_link_colors', 'color' ) ) );
-		$css->set_selector( '.site-footer .site-top-footer-wrap .site-footer-row-container-inner a:not(.button):not(.wp-block-button__link):not(.wp-element-button):hover' );
+		$css->set_selector( '.site-footer .site-top-footer-wrap a:not(.button):not(.wp-block-button__link):not(.wp-element-button):hover' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'footer_top_link_colors', 'hover' ) ) );
 		$css->set_selector( '.site-top-footer-inner-wrap' );
 		$css->add_property( 'min-height', $this->render_range( kadence()->option( 'footer_top_height' ), 'desktop' ) );
@@ -1928,9 +1928,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->render_font( kadence()->option( 'footer_bottom_widget_content' ), $css );
 		$css->add_property( 'border-top', $css->render_border( kadence()->sub_option( 'footer_bottom_top_border', 'desktop' ) ) );
 		$css->add_property( 'border-bottom', $css->render_border( kadence()->sub_option( 'footer_bottom_bottom_border', 'desktop' ) ) );
-		$css->set_selector( '.site-footer .site-bottom-footer-wrap .site-footer-row-container-inner a:not(.button):not(.wp-block-button__link):not(.wp-element-button)' );
+		$css->set_selector( '.site-footer .site-bottom-footer-wrap a:where(:not(.button):not(.wp-block-button__link):not(.wp-element-button))' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'footer_bottom_link_colors', 'color' ) ) );
-		$css->set_selector( '.site-footer .site-bottom-footer-wrap .site-footer-row-container-inner a:not(.button):not(.wp-block-button__link):not(.wp-element-button):hover' );
+		$css->set_selector( '.site-footer .site-bottom-footer-wrap a:where(:not(.button):not(.wp-block-button__link):not(.wp-element-button)):hover' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'footer_bottom_link_colors', 'hover' ) ) );
 		$css->set_selector( '.site-bottom-footer-inner-wrap' );
 		$css->add_property( 'min-height', $this->render_range( kadence()->option( 'footer_bottom_height' ), 'desktop' ) );
@@ -1999,7 +1999,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->set_selector( '.footer-social-wrap .footer-social-inner-wrap' );
 		$css->add_property( 'font-size', $this->render_size( kadence()->option( 'footer_social_icon_size' ) ) );
 		$css->add_property( 'gap', $this->render_size( kadence()->option( 'footer_social_item_spacing' ) ) );
-		$css->set_selector( '.site-footer .site-footer-wrap .site-footer-section .footer-social-wrap .social-button' );
+		$css->set_selector( '.site-footer .site-footer-wrap .site-footer-section .footer-social-wrap .footer-social-inner-wrap .social-button' );
 		if ( ! in_array( kadence()->option( 'footer_social_brand' ), array( 'always', 'untilhover' ), true ) ) {
 			$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'footer_social_color', 'color' ) ) );
 			$css->add_property( 'background', $this->render_color( kadence()->sub_option( 'footer_social_background', 'color' ) ) );
